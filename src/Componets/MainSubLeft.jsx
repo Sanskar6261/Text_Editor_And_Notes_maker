@@ -5,7 +5,6 @@ import { json } from 'react-router-dom'
 
 const mainSubleft = ({ notes, deletenote, activeNoteL, setActiveNote }) => {
 
-
   return (
     <div className='notesList'>
       <input className='SearchField' type="text" placeholder='Search Notes' />
@@ -18,6 +17,7 @@ const mainSubleft = ({ notes, deletenote, activeNoteL, setActiveNote }) => {
                 <button className='deleteBtn' onClick={() => { deletenote(note.id) }}>Delete</button>
                 <button className='downloadBtn'
                   onClick={() => {
+                    // Download code
                     const jsondata=`data:text/json;chatset=utf-8,${encodeURIComponent(JSON.stringify(note.body))}`
                     const link=document.createElement('a');
                     link.href=jsondata
