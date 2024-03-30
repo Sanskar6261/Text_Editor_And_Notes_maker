@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import '../Css/MainSubRight.css'
-const mainSubRight = ({CactiveNote}) => {
+const mainSubRight = ({CactiveNote,activeNote}) => {
   //  const [notetitile,setNoteTitile]=useState("");
   //  const [noteBody,setNoteBody]=useState("");
    
-  return (
-    // <div className="newPageHeading">
-    //    <h1>CREATE NOTE</h1>
-    //    <p>
-    //     <span>CTRL</span>+<span>ALT</span>+<span>N</span>
-    //    </p>
-    // </div>
-    
+
+  if(!activeNote) return(    
+  <div className="newPageHeading">
+     <h1>CREATE NOTE</h1>
+     <p>
+      <span>CTRL</span>+<span>ALT</span>+<span>N</span>
+     </p>
+  </div>
+);
+ 
+  return (    
     <div>
       <div className='ShowData'>
        <h5 className='notetitle'>{CactiveNote.title}</h5>

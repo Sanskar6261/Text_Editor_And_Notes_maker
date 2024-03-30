@@ -13,25 +13,25 @@ const SideBar = ({notes,onaddnotes,deletenote}) => {
         <ul>
           <li>
             {/* <Link to="/quick_notes"> */}
-            <i class="fa-sharp fa-solid fa-bars-staggered menuButtonIcon"></i>
+            <i className="fa-sharp fa-solid fa-bars-staggered menuButtonIcon"></i>
              QUICK NOTES
             {/* </Link> */}
           </li>
           <li>
             {/* <Link to="/"> */}
-            <i class="fa-regular fa-file menuButtonIcon"></i>
+            <i className="fa-regular fa-file menuButtonIcon"></i>
              ALL NOTES
             {/* </Link> */}
           </li>
           <li>
             {/* <Link to="/favorties"> */}
-            <i class="fa-regular fa-bookmark menuButtonIcon"></i>
+            <i className="fa-regular fa-bookmark menuButtonIcon"></i>
             FAVORITES
             {/* </Link> */}
           </li>
           <li>
             {/* <Link to="/trash"> */}
-            <i class="fa-sharp fa-solid fa-trash menuButtonIcon"></i>
+            <i className="fa-sharp fa-solid fa-trash menuButtonIcon"></i>
               TRASH
             {/* </Link> */}
           </li>
@@ -40,9 +40,9 @@ const SideBar = ({notes,onaddnotes,deletenote}) => {
        <ul>
          <li>
          <button className='CategoriesBtn'>
-         <i class="fa-regular fa-square-plus CategoriesBtnIcon" ></i>
+         <i className="fa-regular fa-square-plus CategoriesBtnIcon" ></i>
          CATEGORIES      
-         <i class="fa-solid fa-chevron-down CategoriesBtnIcon"></i>
+         <i className="fa-solid fa-chevron-down CategoriesBtnIcon"></i>
          </button>
          </li>
        </ul>

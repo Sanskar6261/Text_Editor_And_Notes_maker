@@ -13,7 +13,7 @@ const Mainfield = ({notes, deletenote,activeNote,setActiveNote,CurrentactiveNote
            <MainSubLeft notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote}/>
            </div>
            <div className="mainSubRight-Field">
-           <MainSubRight CactiveNote={CurrentactiveNote}/>
+           <MainSubRight CactiveNote={CurrentactiveNote} activeNote={activeNote}/>
            </div>
       </div>
 
