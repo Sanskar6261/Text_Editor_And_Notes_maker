@@ -1,0 +1,52 @@
+
+/* .sideBar{
+    
+} */
+.btnAndHeading{
+    padding: 20px;
+}
+.btn{
+    height: 8vh;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.Heading{
+    color: white;
+    font-size: 30px;
+}
+.menuButton ul{
+    margin-bottom: 50px;
+}
+.menuButtonIcon{
+    padding-right: 20px;
+}
+.menuButton ul li {
+    list-style: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align:start;
+    padding-left:20px ;
+   
+}
+.CategoriesBtn{
+    height: 4vh;
+    width: 2vw;
+    font-size: 15px;
+    background-color: rgb(0, 255, 64);
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+    margin-top: 5px;
+}
+.CategoriesBtnIcon{
+    font-size: 25px;
+    display: inline;
+    padding: 20px;
+}

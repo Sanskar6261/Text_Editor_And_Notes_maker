@@ -1,0 +1,9 @@
+.SearchField{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-sidebar-notes{
+    padding: 5px;
+    border-bottom: 1px solid black;
+}

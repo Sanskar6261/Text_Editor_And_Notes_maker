@@ -1,0 +1,56 @@
+.newPageHeading{
+   text-align: center;
+   margin-top: 30%;
+
+}
+textarea
+{
+    overflow-y:scroll;
+}
+.ShowData 
+{
+   overflow-y: scroll;
+}
+
+.noteEnteryField{
+   background-color: brown;
+}
+.notetitle{
+   margin: 10px 5px;
+   margin-left: 20%;
+   font-size:40px;
+   height: 5vh;
+   width: 40vw;
+   text-align: center;
+}
+.noteBody{
+   height: 40vh;
+   width: 60vw;
+   margin: 5px;
+   margin-left: 20px;
+   font-size: 20px;
+}
+.noteEntrytitle{
+   margin: 10px 5px;
+   margin-left: 15%;
+   font-size:40px;
+   height: 5vh;
+   width: 40vw;
+   text-align: center;
+}
+.noteEntryBody{
+   height: 40vh;
+   width: 55vw;
+   margin: 5px;
+   margin-left: 20px;
+   font-size: 20px;
+}
+.SubmitBtn{
+   height:25px;
+   width: 80px;
+   margin: px;
+   font-size: 20px;
+   color: white;
+   background-color: green;
+   float: right;
+}
