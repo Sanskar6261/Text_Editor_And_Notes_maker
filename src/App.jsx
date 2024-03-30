@@ -12,13 +12,13 @@ import { v4 as uuidv4 } from 'uuid';
 function App() {
 
   const [notes, setnotes] = useState([]);
-
+  const [activeNote,setActiveNote]=useState(false);
   const onaddnotes = () => {
     let cdate = new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes();
 
     const newnote = {
       id: uuidv4(),
-      title: "untitiled note",
+      title: "Untitiled note",
       body: "body",
       lastdateM: cdate,
     }
@@ -31,15 +31,20 @@ function App() {
     setnotes(notes.filter((note) => note.id != deletedId));
     console.log("delete");
   }
+
+  const getActiveNote=()=>{
+    return notes.find((note)=>note.id == activeNote)
+  };
+
   return (
     <div>
       {/* <GlobalProvider> */}
         <div className='App'>
           <div className='app-sidebar'>
-            <SideBar notes={notes} onaddnotes={onaddnotes} deletenote={deletenote} />
+            <SideBar notes={notes} onaddnotes={onaddnotes} deletenote={deletenote}  />
           </div>
           <div className="app-main">
-            <Mainfield notes={notes} deletenote={deletenote} />
+            <Mainfield notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote} CurrentactiveNote={getActiveNote}/>
           </div>
         </div>
       {/* </GlobalProvider> */}

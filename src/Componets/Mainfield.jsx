@@ -6,14 +6,14 @@
 import "../Css/Mainfield.css";
 import MainSubLeft from './MainSubLeft';
 import MainSubRight from './MainSubRight';
-const Mainfield = ({notes, deletenote}) => {
+const Mainfield = ({notes, deletenote,activeNote,setActiveNote,CurrentactiveNote}) => {
   return (
       <div className='MainField'>
            <div className="mainSubLeft-Field">
-           <MainSubLeft notes={notes} deletenote={deletenote}/>
+           <MainSubLeft notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote}/>
            </div>
            <div className="mainSubRight-Field">
-           <MainSubRight/>
+           <MainSubRight CactiveNote={CurrentactiveNote}/>
            </div>
       </div>
 
