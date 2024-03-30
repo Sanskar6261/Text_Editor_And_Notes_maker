@@ -10,7 +10,8 @@ const mainSubleft = ({notes,deletenote,activeNoteL,setActiveNote}) => {
               <div className={"app-sidebar-note "}>
                 <div className='sidebar-note-title'>
                   <strong>{note.title && note.title.substr(0,15)+"..."}</strong>
-                  <button className='deleteBtn' onClick={() => {deletenote(note.id)}}>Delete</button>           
+                  <button className='deleteBtn' onClick={() => {deletenote(note.id)}}>Delete</button>
+                  <button className='downloadBtn'>Download</button>           
                 </div>
       
                 <p>{note.body && note.body.substr(0,15)+"..."}</p>

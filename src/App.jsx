@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import uuid from 'uuid'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SideBar from './Componets/SideBar'
@@ -11,8 +11,14 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css'
 function App() {
 
-  const [notes, setnotes] = useState([]);
+  const [notes, setnotes] = useState(JSON.parse(localStorage.notes)||[]);
   const [activeNote,setActiveNote]=useState(false);
+  
+  //For local Storage
+  useEffect(()=>{
+    localStorage.setItem("notes",JSON.stringify(notes));
+  },[notes]);
+
   const onaddnotes = () => {
     let cdate = new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes();
 
