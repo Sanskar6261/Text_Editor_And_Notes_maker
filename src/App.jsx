@@ -1,7 +1,6 @@
 import { useState } from 'react'
 // import uuid from 'uuid'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import SideBar from './Componets/SideBar'
 import NotesList from './Componets/NotesLists'
 import FavoritesNotes from './Componets/FavoritesNotes'
@@ -9,6 +8,7 @@ import Trash from './Componets/Trash'
 import Mainfield from './Componets/Mainfield'
 import { GlobalProvider } from '../src/Global/GlobalState';
 import { v4 as uuidv4 } from 'uuid';
+import './App.css'
 function App() {
 
   const [notes, setnotes] = useState([]);
@@ -16,25 +16,39 @@ function App() {
   const onaddnotes = () => {
     let cdate = new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes();
 
-    const newnote = {
+  const newnote = {
       id: uuidv4(),
       title: "Untitiled note",
-      body: "body",
+      body: "",
       lastdateM: cdate,
     }
 
     setnotes([newnote, ...notes]);
-    // console.log("ABHAY");
+    console.log("Add note");
   }
 
-  let deletenote = (deletedId) => {
+  const deletenote = (deletedId) => {
     setnotes(notes.filter((note) => note.id != deletedId));
-    console.log("delete");
+    console.log("Delete note");
+  }
+  
+  const getUpdatedNote=(updatenote)=>{
+     const getCUpdateNote = notes.map((note)=>{
+             if(note.id==activeNote)
+             {
+              return updatenote;
+             }
+             return note;
+          });
+
+    setnotes(getCUpdateNote);
+    
   }
 
   const getActiveNote=()=>{
     return notes.find((note)=>note.id == activeNote)
   };
+
 
   return (
     <div>
@@ -44,7 +58,7 @@ function App() {
             <SideBar notes={notes} onaddnotes={onaddnotes} deletenote={deletenote}  />
           </div>
           <div className="app-main">
-            <Mainfield notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote} CurrentactiveNote={getActiveNote}/>
+            <Mainfield notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote} CurrentactiveNote={getActiveNote()} getUpdatedNote={getUpdatedNote}/>
           </div>
         </div>
       {/* </GlobalProvider> */}

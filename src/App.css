@@ -23,8 +23,8 @@
 .app-sidebar{
   width: 20%;
   height: 100vh;
-  border-right: 5px solid #000000;
-  background-color: rgb(0, 255, 64);
+  border-right: 2px solid #000000;
+  background-color: rgba(52, 224, 95, 0.913);
 }
 .app-main{
   width: 80%;

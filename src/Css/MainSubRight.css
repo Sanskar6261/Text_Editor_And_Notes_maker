@@ -3,17 +3,13 @@
    margin-top: 30%;
 
 }
-textarea
-{
-    overflow-y:scroll;
-}
 .ShowData 
 {
    overflow-y: scroll;
 }
 
 .noteEnteryField{
-   background-color: brown;
+   background-color: rgba(52, 224, 95, 0.913);
 }
 .notetitle{
    margin: 10px 5px;
@@ -29,11 +25,12 @@ textarea
    margin: 5px;
    margin-left: 20px;
    font-size: 20px;
+   /* overflow-y:scroll; */
 }
 .noteEntrytitle{
    margin: 10px 5px;
    margin-left: 15%;
-   font-size:40px;
+   font-size:25px;
    height: 5vh;
    width: 40vw;
    text-align: center;
