@@ -5,7 +5,7 @@
 .btnAndHeading{
     padding: 20px;
 }
-.btn{
+.addNotebtn{
     height: 8vh;
     width: 4vw;
     border-radius: 50%;
@@ -15,17 +15,25 @@
     font-size: 25px;
     cursor: pointer;
 }
+
+
+
 .Heading{
     color: white;
     font-size: 30px;
 }
-.menuButton ul{
-    margin-bottom: 50px;
+
+.sideBarMainBtn button{
+  color: white;
+  margin-left: 20%;
+  padding: 20px;
 }
+
 .menuButtonIcon{
-    padding-right: 20px;
+
 }
-.menuButton ul li {
+
+/* .menuButton ul li {
     list-style: none;
     color: white;
     padding: 10px;
@@ -33,7 +41,7 @@
     text-align:start;
     padding-left:20px ;
    
-}
+} */
 .CategoriesBtn{
     height: 4vh;
     width: 2vw;

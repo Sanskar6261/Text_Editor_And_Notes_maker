@@ -48,8 +48,8 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
             onEditField("body", e.target.value);
           }}
           placeholder='Enter your note here....' cols="70" rows="20" >
-        </textarea>
-        <button  className="SubmitBtn">Submit</button>
+        </textarea><br />
+        <button type="button" class="btn btn-success SubmitBtn">Success</button>
       </div>
 
     </div >

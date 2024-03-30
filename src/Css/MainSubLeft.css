@@ -1,6 +1,6 @@
-.SearchField{
+.searchBtn{
     margin: 5px; 
-    width: 15vw;
+    width: 90%;
     height: 5vh;
     font-size: 15px;   
 }
@@ -16,7 +16,8 @@
     background-color: black;
     color: white;
 }
-.deleteBtn{
-    float: right;
-    
+.optionBtn{
+   background-color: rgb(146, 146, 146);
+   color: black;
+   float: right;
 }

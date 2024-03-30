@@ -36,18 +36,19 @@
    text-align: center;
 }
 .noteEntryBody{
-   height: 40vh;
+   height: 30vh;
    width: 55vw;
    margin: 5px;
    margin-left: 20px;
    font-size: 20px;
 }
 .SubmitBtn{
-   height:25px;
-   width: 80px;
-   margin: px;
-   font-size: 20px;
+   height:40px;
+   width: 100px;
+   padding: 10px;
+   font-size: 15px;
    color: white;
    background-color: green;
-   float: right;
+   margin: 10px;
+
 }
