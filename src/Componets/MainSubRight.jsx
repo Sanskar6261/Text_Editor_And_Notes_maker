@@ -31,6 +31,7 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
 
   return (
     <div>
+      
       {/* Preview Data */}
       <div className='ShowData'>
         <h5 className='notetitle'><u>{activeNote.title}</u></h5>
