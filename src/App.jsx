@@ -9,9 +9,10 @@ import Mainfield from './Componets/Mainfield'
 import { GlobalProvider } from '../src/Global/GlobalState';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css'
-function App() {
+ function App() {
 
   const [notes, setnotes] = useState(JSON.parse(localStorage.notes)||[]);
+  // const [notes, setnotes] = useState([]);
   const [activeNote,setActiveNote]=useState(false);
   
   //For local Storage
@@ -27,6 +28,7 @@ function App() {
       title: "Untitiled note",
       body: "",
       lastdateM: cdate,
+      favorite:false,
     }
 
     setnotes([newnote, ...notes]);
@@ -55,16 +57,40 @@ function App() {
     return notes.find((note)=>note.id == activeNote)
   };
 
+  //This fav for favrate button to click and make favrate
+  const [favValue,setFavrate]=useState();
+  const [searchText,setSearchText]=useState('');
+
+  //this fav to see seleted favrate notes
+  const [FValue,setFValue]=useState(false);
+  const handleFavList=(value)=>{
+      if(value==true){
+        setFValue=true;
+      }
+  }
+  // const [TemNotes,setTemNotes]=useState(notes);
+
+  // if(searchText=='')
+  // {
+  //    if(FValue==true)
+  //    {
+  //     setTemNotes(notes.filter((note)=>note.favorite==true));
+  //    }
+  // }
+  // else
+  // {
+  //     setTemNotes(notes.filter((note)=>note.title.toLowerCase().includes(searchText)));
+  // }
 
   return (
     <div>
       {/* <GlobalProvider> */}
         <div className='App'>
           <div className='app-sidebar'>
-            <SideBar notes={notes} onaddnotes={onaddnotes} deletenote={deletenote}  />
+            <SideBar notes={notes} onaddnotes={onaddnotes} handleFavList={handleFavList} deletenote={deletenote} favValue={favValue}  setFavrate={setFavrate}/>
           </div>
           <div className="app-main">
-            <Mainfield notes={notes} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote} CurrentactiveNote={getActiveNote()} getUpdatedNote={getUpdatedNote}/>
+            <Mainfield notes={notes.filter((note)=>note.title.toLowerCase().includes(searchText))} handleSearchNote={setSearchText} deletenote={deletenote} activeNote={activeNote} setActiveNote={setActiveNote} CurrentactiveNote={getActiveNote()} getUpdatedNote={getUpdatedNote} favrate={favValue} />
           </div>
         </div>
       {/* </GlobalProvider> */}

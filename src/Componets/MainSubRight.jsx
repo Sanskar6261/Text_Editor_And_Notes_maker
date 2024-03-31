@@ -9,6 +9,7 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
       ...activeNote,
       [key]: value,
       date: new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes(),
+      favorite:false,
     })
   }
 
@@ -49,7 +50,7 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
           }}
           placeholder='Enter your note here....' cols="70" rows="20" >
         </textarea><br />
-        <button type="button" class="btn btn-success SubmitBtn">Success</button>
+        <button type="button" className="btn btn-success SubmitBtn">Success</button>
       </div>
 
     </div >

@@ -2,7 +2,7 @@ import React from 'react'
 import "../Css/SideBar.css"
 import { Link } from 'react-router-dom'
 
-const SideBar = ({ notes, onaddnotes, deletenote }) => {
+const SideBar = ({ notes, onaddnotes , setFValue , deletenote , favValue , handleFavList}) => {
   return (
     <div className='sideBar'>
 
@@ -12,20 +12,20 @@ const SideBar = ({ notes, onaddnotes, deletenote }) => {
       </div>
 
       <div className='menuButton sideBarMainBtn' >
-        <div class="btn-group-vertical " role="group" aria-label="Vertical button group">
-          <button type="button" class="btn">
+        <div className="btn-group-vertical " role="group" aria-label="Vertical button group">
+          <button type="button" className="btn">
             <i className="fa-sharp fa-solid fa-bars-staggered menuButtonIcon"></i>
             QUICK NOTES
           </button>
-          <button type="button" class="btn ">
+          <button type="button" className="btn ">
             <i className="fa-regular fa-file menuButtonIcon"></i>
             ALL NOTES
           </button>
-          <button type="button" class="btn ">
+          <button type="button" className="btn "  onClick={()=>{handleFavList(true)}}>
             <i className="fa-regular fa-bookmark menuButtonIcon"></i>
             FAVORITES
           </button>
-          <button type="button" class="btn ">
+          <button type="button" className="btn ">
             <i className="fa-sharp fa-solid fa-trash menuButtonIcon"></i>
             TRASH
           </button>
