@@ -9,7 +9,7 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
       ...activeNote,
       [key]: value,
       date: new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes(),
-      favorite:false,
+      favorite: false,
     })
   }
 
@@ -31,19 +31,19 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
 
   return (
     <div>
-      
+
       {/* Preview Data */}
       <div className='ShowData'>
         <h5 className='notetitle'><u>{activeNote.title}</u></h5>
         <div className='noteBody'>{activeNote.body}</div>
       </div>
-      
-       {/* Enter data by user */}
+
+      {/* Enter data by user */}
       <div className='noteEnteryField'>
         <input type="text" className="noteEntrytitle" value={activeNote.title}
           onChange={(e) => {
             onEditField("title", e.target.value)
-          }}  minLength="5"/>
+          }} minLength="5" />
         <br />
         <textarea className="noteEntryBody" value={activeNote.body}
           onChange={(e) => {
@@ -51,7 +51,13 @@ const mainSubRight = ({ activeNote, activeNoteR, getUpdatedNote }) => {
           }}
           placeholder='Enter your note here....' cols="70" rows="20" >
         </textarea><br />
-        <button type="button" className="btn btn-success SubmitBtn">Success</button>
+        <button type="button" className="btn btn-success SubmitBtn" onClick={() => {alert("Note addded Succesfully")}} >Success</button>
+        {/* ---------------------- */}
+        <button type="button" className="btn btn-success SubmitBtn" onClick={() => {alert(" --------Shortcut Keys-------- \n\n 1) ctrl + alt + N = For new file\n 2) ctrl + alt + f = For make Favrote\n 3) ctrl + alt + d = For Download \n 4) ctrl + Delete = Delete")}} >Key</button>
+        {/* ----------------------- */}
+      </div>
+      <div>
+
       </div>
 
     </div >

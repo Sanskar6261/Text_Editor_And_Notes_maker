@@ -1,13 +1,16 @@
 import React from "react";
 import { createContext } from "react";
 import { useReducer } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import AppReducer from './AppReducer'
 const initialState={
     notes:[
        {
-        title:"Untitile",
-        body:"abcd",
-        date:21/23/20-12/25
+        id: uuidv4(),
+        title: "Untitiled note",
+        body: "",
+        lastdateM: new Date().toLocaleDateString() + "- " + new Date().getHours() + ":" + new Date().getMinutes(),
+        favorite: false,
        }
     ]
 }
